@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Academic Escape</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MAIN APPLICATION
+    ========================== -->
+
+    <main id="game">
+
+        <!-- =====================
+             START SCREEN
+        ====================== -->
+
+        <section id="start-screen" class="screen">
+
+            <div class="game-logo">
+
+                <span class="logo-icon">🔐</span>
+
+                <h1>ACADEMIC<br>ESCAPE</h1>
+
+                <p>
+                    Can you escape before time runs out?
+                </p>
+
+            </div>
+
+
+            <div class="game-description">
+
+                <p>
+                    Solve challenges, unlock rooms,
+                    and find your way out.
+                </p>
+
+            </div>
+
+
+            <div class="start-actions">
+
+                <button id="start-button">
+                    START GAME
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             GAME SCREEN
+        ====================== -->
+
+        <section 
+            id="game-screen" 
+            class="screen hidden"
+        >
+
+            <!-- GAME HEADER -->
+
+            <header class="game-header">
+
+                <div class="room-info">
+
+                    <span id="room-number">
+                        ROOM 01
+                    </span>
+
+                    <span id="room-name">
+                        CLASSROOM
+                    </span>
+
+                </div>
+
+
+                <div class="game-status">
+
+                    <div class="timer">
+
+                        <span>TIME</span>
+
+                        <strong id="timer">
+                            05:00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="score">
+
+                        <span>SCORE</span>
+
+                        <strong id="score">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <div class="progress-info">
+
+                    <span>
+                        Progress
+                    </span>
+
+                    <span id="progress-text">
+                        1 / 4
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div 
+                        id="progress-fill"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROOM CONTENT -->
+
+            <section 
+                id="room-container"
+                class="room-container"
+            >
+
+                <!--
+                    Room content will be
+                    inserted by JavaScript.
+                -->
+
+            </section>
+
+
+        </section>
+
+
+        <!-- =====================
+             RESULT SCREEN
+        ====================== -->
+
+        <section 
+            id="result-screen" 
+            class="screen hidden"
+        >
+
+            <div class="result-header">
+
+                <div class="result-icon">
+                    🎉
+                </div>
+
+                <h2>
+                    YOU ESCAPED!
+                </h2>
+
+                <p>
+                    The academic facility has been unlocked.
+                </p>
+
+            </div>
+
+
+            <div class="result-stats">
+
+                <div class="stat">
+
+                    <span>
+                        SCORE
+                    </span>
+
+                    <strong id="final-score">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>
+                        TIME
+                    </span>
+
+                    <strong id="final-time">
+                        00:00
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>
+                        CORRECT
+                    </span>
+
+                    <strong id="final-correct">
+                        0/0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-actions">
+
+                <button id="restart-button">
+                    PLAY AGAIN
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             GAME OVER SCREEN
+        ====================== -->
+
+        <section 
+            id="game-over-screen" 
+            class="screen hidden"
+        >
+
+            <div class="game-over-content">
+
+                <div class="game-over-icon">
+                    ⏰
+                </div>
+
+                <h2>
+                    TIME'S UP
+                </h2>
+
+                <p>
+                    You ran out of time.
+                </p>
+
+                <button id="try-again-button">
+                    TRY AGAIN
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="game.js"></script>
+
+</body>
+</html>
